@@ -12,6 +12,7 @@ This project analyzes transactional sales data from **Maven Roasters**, a fictio
 - [Analysis Scope](#analysis-scope)
 - [Key Insights](#key-insights)
 - [Limitations & Assumptions](#limitations--assumptions)
+- [Project Structure](#project-structure)
 - [How to Run](#how-to-run)
 - [Tools Used](#tools-used)
 
@@ -150,6 +151,14 @@ The analysis covers:
 - No customer-level data was available, limiting behavioral segmentation analysis.
 - Revenue analysis assumes consistent pricing and no returns or refunds.
 - External factors (promotions, holidays, weather) were not included in the analysis.
+
+<br>
+
+## Project Structure
+
+- `data/coffee_sales.csv` – source dataset  
+- `sql/coffee_sales_analysis.sql` – complete SQL script (data cleaning, modeling, analysis)  
+- `README.md` – project documentation
 
 <br>
 
