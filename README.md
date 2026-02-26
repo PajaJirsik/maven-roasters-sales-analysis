@@ -2,45 +2,30 @@
 
 This project analyzes transactional sales data from **Maven Roasters**, a fictional coffee shop based in New York City with three store locations.
 
----
+<br>
 
-## 📌 Project Overview
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Dataset Description](#dataset-description)
+- [Data Modeling Approach](#data-modeling-approach)
+- [Analysis Scope](#analysis-scope)
+- [Key Insights](#key-insights)
+- [Limitations & Assumptions](#limitations--assumptions)
+- [How to Run](#how-to-run)
+- [Tools Used](#tools-used)
+
+<br>
+
+## Project Overview
 
 The goal of this project was to transform raw transaction-level data into a structured analytical model using a **star schema** design. After building the data model, I performed business analysis to identify key revenue drivers, customer purchasing patterns, and performance differences across store locations.
 
 The project combines SQL-based data modeling with practical business insights.
 
----
+<br>
 
-## Key Steps
-
-- Data cleaning and validation  
-- Building a star schema (fact and dimension tables)  
-- Creating order-level metrics from line-level data  
-- Revenue and Average Order Value (AOV) analysis  
-- Time-based sales analysis (monthly, daily, hourly)  
-- Store-level performance and behavior comparison  
-
----
-
-## Main Insights
-
-- Key sales patterns over time  
-- Revenue comparison across store locations  
-- Customer purchasing behavior analysis  
-- Store-level performance differences   
-
----
-
-## Tools Used
-
-- SQL  
-- Relational data modeling (Star Schema)  
-- Data analysis techniques
-
----  
-
-## 📂 Dataset Description
+## Dataset Description
 
 The dataset contains sales transaction data from three **Maven Roasters** shops in New York City.
 
@@ -56,18 +41,6 @@ The dataset includes:
 
 This structure allows aggregation at product, order, store, and time levels.
 
----
-
-### Data Analysis Levels
-
-The structure of the dataset allows analysis on different levels:
-
-- **Product-level** analysis  
-- **Order-level** analysis (using aggregation)  
-- **Store-level** comparison  
-- **Time-based** analysis (day, weekday vs. weekend, hour of day)  
-
----
 
 ### Data Source
 
@@ -77,7 +50,7 @@ It contains transactional coffee shop sales data for January–June 2023.
 
 Available on https://www.kaggle.com/datasets/agungpambudi/trends-product-coffee-shop-sales-revenue-dataset
 
---- 
+<br>
 
 ## Data Modeling Approach
 
@@ -98,6 +71,7 @@ The fact table contains:
 - Unit price  
 - Revenue (calculated as quantity × unit price)
 
+
 ### Dimension Tables
 
 Two dimension tables were created:
@@ -106,6 +80,7 @@ Two dimension tables were created:
 - `dim_product` – product attributes (category, type, detail)  
 
 This structure separates descriptive attributes from transactional data and allows efficient aggregation across stores, products, and time.
+
 
 ### Order-Level Aggregation
 
@@ -128,7 +103,18 @@ Each row in `v_orders` represents one customer order and includes:
 
 This approach allows correct calculation of order-level metrics such as Average Order Value (AOV).
 
----
+<br>
+
+## Analysis Scope
+
+The analysis covers:
+
+- Product-level performance  
+- Reconstructed order-level metrics  
+- Store-level comparison  
+- Time-based analysis (monthly, weekday, hourly)
+
+<br>
 
 ## Key Insights
 
@@ -155,7 +141,7 @@ This approach allows correct calculation of order-level metrics such as Average 
   Hell’s Kitchen is the most morning-driven location, 
   while Astoria shows a more balanced daily distribution.
 
----
+<br>
 
 ## Limitations & Assumptions
 
@@ -165,7 +151,7 @@ This approach allows correct calculation of order-level metrics such as Average 
 - Revenue analysis assumes consistent pricing and no returns or refunds.
 - External factors (promotions, holidays, weather) were not included in the analysis.
 
---- 
+<br>
 
 ## How to Run
 
@@ -178,5 +164,13 @@ This approach allows correct calculation of order-level metrics such as Average 
      to match your local file location,
    - or use MySQL Workbench's Table Data Import Wizard.
 5. Run the remaining queries in the script to reproduce the analysis.
+
+<br>
+
+## Tools Used
+
+- MySQL  
+- Relational data modeling (Star Schema)  
+- Data analysis techniques
 
 
