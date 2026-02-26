@@ -71,8 +71,11 @@ The structure of the dataset allows analysis on different levels:
 
 ### Data Source
 
-Maven Analytics – Public training dataset
-Available on Kaggle: https://www.kaggle.com/datasets/agungpambudi/trends-product-coffee-shop-sales-revenue-dataset
+The dataset was sourced from Kaggle and is distributed under a CC0 (Public Domain) license.
+
+It contains transactional coffee shop sales data for January–June 2023.
+
+Available on https://www.kaggle.com/datasets/agungpambudi/trends-product-coffee-shop-sales-revenue-dataset
 
 --- 
 
@@ -166,8 +169,14 @@ This approach allows correct calculation of order-level metrics such as Average 
 
 ## How to Run
 
-1. Create the database.
-2. Import the CSV file.
-3. Execute the SQL script in order.
+1. Download the repository and place the CSV file locally.
+2. Open MySQL Workbench (or another MySQL client).
+3. Execute the SQL script:
+   - The script creates the database automatically.
+4. Import the CSV file:
+   - Either update the file path in the `LOAD DATA LOCAL INFILE` statement
+     to match your local file location,
+   - or use MySQL Workbench's Table Data Import Wizard.
+5. Run the remaining queries in the script to reproduce the analysis.
 
 
