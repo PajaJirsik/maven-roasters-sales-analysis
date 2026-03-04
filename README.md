@@ -57,6 +57,8 @@ Available on https://www.kaggle.com/datasets/agungpambudi/trends-product-coffee-
 
 The raw dataset was transformed into a star schema model to support structured analysis.
 
+![Star Schema](schema/star_schema.png)
+
 ### Fact Table
 
 The central table, `fact_sales`, was created at a product-level grain.  
